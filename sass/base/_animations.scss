@@ -1,0 +1,59 @@
+/* animation-delay: 3s; */
+/* animation-iteration-count: 3 */
+/* animation-timing-function: 3 */
+/* Key frames %'s mean at what stage in the event beginning middle end etc 
+    animation delay is an event listener that waits before it runs
+    animation-iteration-count re-runs the animation the amount of times
+    animation-timing-function specifies how an animation should progress over the duration of each style
+*/
+@keyframes moveInLeft{
+    0%{
+        opacity: 0;
+        transform: translateX(-20rem);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0);
+        
+    }
+}
+@keyframes moveInRight{
+    0%{
+        opacity: 0;
+        transform: translateX(20rem);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+@keyframes moveInBottom{
+    0%{
+        opacity: 0;
+        transform: translateY(3rem);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+
+/* animation: rotateThing 4s;
+animation-iteration-count: infinite; */
+/* Extra practice to rotate an object infinitley */
+/* @keyframes rotateThing{
+    0%{
+        opacity: 0.5;
+        transform: rotate(360deg);
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0.5;
+    }
+} */
