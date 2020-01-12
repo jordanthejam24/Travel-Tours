@@ -1,5 +1,6 @@
 /* sudo statement, & to allow both to be the same */
 .btn{
+    &,
     &:link, 
     &:visited {
         text-transform: uppercase;
@@ -11,6 +12,10 @@
         position: relative;
         backface-visibility: hidden;
         font-size: 1.6rem;
+
+        //change for the <button> element
+        border: none;
+        cursor: pointer;
     }
     /* transition has to be on initial state */
     &:hover{
@@ -21,7 +26,9 @@
             opacity: 0;
         }
     }
-    &:active{
+    &:active,
+    &:focus{
+        outline: none;
         transform: translateY(-1px);
         box-shadow: 0 .5rem 1rem rgba($color-black, .2);
     }
@@ -29,7 +36,7 @@
         background-color: $color-white;
         color: $color-grey;
         &::after{
-            background-color: white;
+            background-color: $color-white;
         }
     }
     &--green{
