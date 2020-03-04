@@ -19,6 +19,8 @@
         overflow: hidden;
         box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
 
+        // @supports 
+
         &--front {
             background-color: $color-white;
         }
@@ -162,11 +164,12 @@
 
 
 
-
-    @include respond(tab-port) {
+    //need to add another condition, however can't add conditions when calling a mixin, gotta write the media query itself
+    // @include respond(tab-port) {
     // @media only screen and (max-width: 56.25em),
     //         only screen and (hover: none) {
-
+        //hover:none checks for if hover can be used or not
+    @media only screen and (max-width: 56.25em), only screen and (hover:none) { 
         height: auto;
         border-radius: 3px;
         background-color: $color-white;
